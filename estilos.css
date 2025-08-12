@@ -3,13 +3,12 @@ body {
   margin: 0;
   padding: 0;
   background: 
-    url('https://i.imgur.com/3NwXQf5.png') repeat, /* textura telaraña */
+    url('https://i.imgur.com/3NwXQf5.png') repeat, 
     linear-gradient(to bottom, #0d47a1, #b71c1c);
   background-size: auto, cover;
   color: #fff;
 }
 
-/* Imagen grande de Spider-Man al fondo */
 body::before {
   content: "";
   position: fixed;
@@ -41,7 +40,6 @@ p {
   margin-bottom: 30px;
 }
 
-/* Contenedor principal de la malla */
 .grid-malla {
   display: flex;
   justify-content: center;
@@ -53,14 +51,12 @@ p {
   z-index: 1;
 }
 
-/* Cada columna representa un año */
 .columna-año {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Título del año */
 .titulo-año {
   font-size: 1.5rem;
   background: #b71c1c;
@@ -71,7 +67,6 @@ p {
   text-shadow: 2px 2px 4px #000;
 }
 
-/* Cada semestre es una columna dentro del año */
 .semestre {
   background: rgba(0, 0, 0, 0.3);
   padding: 15px;
@@ -80,7 +75,6 @@ p {
   box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
 
-/* Título del semestre */
 .titulo-semestre {
   font-weight: bold;
   font-size: 1.2rem;
@@ -90,7 +84,6 @@ p {
   text-shadow: 1px 1px 3px #000;
 }
 
-/* Botones de los ramos */
 .ramo {
   background: linear-gradient(to bottom, #e53935, #b71c1c);
   border: 2px solid #fff;
@@ -110,19 +103,16 @@ p {
   background: linear-gradient(to bottom, #ff1744, #b71c1c);
 }
 
-/* Ramos aprobados */
 .ramo.aprobado {
   background: linear-gradient(to bottom, #1976d2, #0d47a1);
   border-color: #ffeb3b;
 }
 
-/* Deshabilitados */
 .ramo.deshabilitado {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* Scroll bonito */
 ::-webkit-scrollbar {
   height: 10px;
 }
