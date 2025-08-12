@@ -1,0 +1,138 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: 
+    url('https://i.imgur.com/3NwXQf5.png') repeat, /* textura telaraña */
+    linear-gradient(to bottom, #0d47a1, #b71c1c);
+  background-size: auto, cover;
+  color: #fff;
+}
+
+/* Imagen grande de Spider-Man al fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  background: url('https://i.imgur.com/fKJZ2oZ.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.08;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+h1, p {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px #000;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Contenedor principal de la malla */
+.grid-malla {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cada columna representa un año */
+.columna-año {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Título del año */
+.titulo-año {
+  font-size: 1.5rem;
+  background: #b71c1c;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  border: 3px solid #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Cada semestre es una columna dentro del año */
+.semestre {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* Título del semestre */
+.titulo-semestre {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ffeb3b;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Botones de los ramos */
+.ramo {
+  background: linear-gradient(to bottom, #e53935, #b71c1c);
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.ramo:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom, #ff1744, #b71c1c);
+}
+
+/* Ramos aprobados */
+.ramo.aprobado {
+  background: linear-gradient(to bottom, #1976d2, #0d47a1);
+  border-color: #ffeb3b;
+}
+
+/* Deshabilitados */
+.ramo.deshabilitado {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Scroll bonito */
+::-webkit-scrollbar {
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0d47a1;
+}
+::-webkit-scrollbar-thumb {
+  background: #b71c1c;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff1744;
+}
