@@ -1,0 +1,99 @@
+/* Fuente y fondo general */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background:
+    url('https://i.imgur.com/0ubOVoD.png') repeat, /* textura telaraña */
+    url('https://i.imgur.com/GkIY0YO.png') center/cover no-repeat; /* Spider-Man */
+  background-color: #111; /* respaldo oscuro */
+  background-attachment: fixed, fixed;
+  color: white;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  padding: 20px;
+  color: #ff0000;
+  text-shadow: 2px 2px 5px black;
+  font-family: 'Impact', sans-serif;
+}
+
+/* Texto introductorio */
+p {
+  text-align: center;
+  color: #ffd700;
+  font-size: 1.2em;
+}
+
+/* Contenedor de la malla */
+.contenedor-malla {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Columnas por año */
+.anio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff0000;
+}
+
+/* Encabezado de año */
+.anio h2 {
+  text-align: center;
+  color: #00aaff;
+  margin: 0;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* Cuadro de ramo */
+.ramo {
+  background: linear-gradient(135deg, #ff0000, #0000aa);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid #000;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover de ramo */
+.ramo:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px #ff0000;
+}
+
+/* Ramo bloqueado */
+.ramo.bloqueado {
+  background: gray;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+/* Ramo aprobado */
+.ramo.aprobado {
+  background: linear-gradient(135deg, #00ff00, #007700);
+  border-color: #00aa00;
+}
+
+/* Ajuste para móvil */
+@media (max-width: 768px) {
+  .contenedor-malla {
+    flex-direction: column;
+    align-items: center;
+  }
+}
