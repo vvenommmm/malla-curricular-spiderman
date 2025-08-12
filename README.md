@@ -1,1 +1,0 @@
-# malla-curricular-spiderman
