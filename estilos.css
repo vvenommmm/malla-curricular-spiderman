@@ -1,12 +1,13 @@
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: 
-    url('https://i.imgur.com/3NwXQf5.png') repeat, 
-    linear-gradient(to bottom, #0d47a1, #b71c1c);
-  background-size: auto, cover;
-  color: #fff;
+  background:
+    url('https://i.imgur.com/0ubOVoD.png') repeat, /* textura telaraña */
+    url('https://i.imgur.com/GkIY0YO.png') center/cover no-repeat;
+  background-color: #111; /* respaldo oscuro */
+  background-attachment: fixed, fixed;
+  color: white;
 }
 
 body::before {
