@@ -1,0 +1,79 @@
+body {
+  font-family: 'Arial Black', sans-serif;
+  background: radial-gradient(circle at top, #ff0000, #000000);
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px black;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.grid-malla {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 3px solid #ffcc00;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.semestre {
+  border: 2px dashed #ffcc00;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.ramo {
+  background: linear-gradient(135deg, #ff0000, #000099);
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.ramo:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff3333, #0000cc);
+}
+
+.ramo.aprobado {
+  background: linear-gradient(135deg, #00cc00, #003300);
+  border-color: #00ff00;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Animación de telaraña */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/spider-web.png');
+  opacity: 0.15;
+  z-index: -1;
+}
